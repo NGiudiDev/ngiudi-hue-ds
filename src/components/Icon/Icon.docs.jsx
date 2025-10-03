@@ -3,12 +3,15 @@ import React from "react";
 import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
 import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { Icon } from "../Icon/Icon";
 import { Text } from "../Text/Text";
+
+import { icons } from "../../theme/icons";
 
 export const IconDocs = () => {
   return (
+    <ThemeDS>
     <Unstyled>
-      <ThemeDS>
         <Text margin="b-16" type="pageTitle">
           Icon
         </Text>
@@ -17,10 +20,8 @@ export const IconDocs = () => {
           Los íconos son representaciones visuales que se utilizan para comunicar las características esenciales de una acción, un objeto o un concepto específico. Deben ser simples y fácilmente identificables.
         </Text>
 
-        <Canvas />
-
          <Text margin="b-24" type="title">
-          Principles
+          Principios
         </Text>
 
         <div style={{ border: "1px solid #e1e1e1", borderRadius: "8px", padding: "16px", marginBottom: "16px", backgroundColor: "#f8f9fa" }}>
@@ -67,8 +68,45 @@ export const IconDocs = () => {
           Propiedades
         </Text>
 
+        <Canvas />
+
         <Controls />
-      </ThemeDS>
+
+        <Text margin="b-16" type="title">
+          Listado de íconos
+        </Text>
+
+        <Text>
+          A continuación se muestra el listado completo de íconos disponibles en el sistema. Si necesitas un ícono que no está en la lista, por favor contacta al equipo de diseño.
+        </Text>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
+            gap: "16px",
+            padding: "20px",
+          }}
+        >
+          {Object.keys(icons).map((name) => (
+            <div
+              key={`container-icon-${name}`}
+              style={{
+                alignItems: "center",
+                display: "flex",
+                flexDirection: "column",
+                padding: "16px",
+              }}
+            >
+              <Icon name={name} size="major" />
+
+              <Text align="center" margin="t-16" type="captionRegular">
+                {name}
+              </Text>
+            </div>
+          ))}
+        </div>
     </Unstyled>
+    </ThemeDS>
   );
 };
