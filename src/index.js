@@ -27,4 +27,6 @@
 
 export { Icon } from "./components/Icon/Icon";
 
+export { Text } from "./components/Text/Text";
+
 export { ThemeDS } from "./components/ThemeDS/ThemeDS";

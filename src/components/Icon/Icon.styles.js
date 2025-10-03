@@ -1,12 +1,7 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { css } from "styled-components";
 
 import { marginProperties } from "../../utils/spacing";
-
-//? animations
-const iconSpin = keyframes`
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-`;
+import { animations } from "../../theme/animations";
 
 //? sizes declaration
 const ICON_WRAPPER_SIZES = {
@@ -38,7 +33,7 @@ const IconWrapper = styled("div")`
   cursor: ${props => props.onClick ? "pointer" : "default"};
   
   ${props => props.$spin && css`
-    animation: ${iconSpin} 1s linear infinite;
+    animation: ${animations.spin} 1s linear infinite;
   `}
   
   ${props => marginProperties(props)}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { IconDocs } from "./Icon.docs";
+
 import { ThemeDS } from "../ThemeDS/ThemeDS";
 import { Icon } from "../Icon/Icon";
 
@@ -9,15 +11,16 @@ const meta = {
   argTypes: {
     color: {
       control: { type: "text" },
-      description: "Define el color del ícono. Acepta tokens de color.",
+      description: "Define el color del ícono. Acepta tokens de color del tema.",
     },
     margin: {
       control: { type: "text" },
       description: "Establece el margen alrededor del ícono. Acepta tokens de espaciado.",
     },
     name: {
-      control: { type: "text" },
-      description: "Especifica el nombre del ícono de FontAwesome a mostrar.",
+      control: { type: "select" },
+      description: "Especifica el nombre del ícono a mostrar.",
+      options: Object.keys(icons),
     },
     onClick: {
       action: "clicked",
@@ -35,35 +38,39 @@ const meta = {
     },
   },
   component: Icon,
+  parameters: {
+    docs: {
+      page: IconDocs,
+    },
+  },
   tags: ["autodocs"],
   title: "Components/Icon",
 };
 
-export const Colors = () => {
-  console.log();
+// Playground interactivo para probar todas las props
+export const Playground = {
+  args: {
+    name: "home",
+    size: "major",
+    color: "black", 
+    spin: false,
+    margin: "a-0",
+  },
+  render: (args) => (
+    <ThemeDS>
+      <Icon {...args} />
+    </ThemeDS>
+  ),
+};
 
+// Story para mostrar todos los iconos disponibles
+/* export const TodosLosIconos = () => {
   return (
     <ThemeDS>
-      <div>
-        <Icon color="primary" margin="r-32" size="spot" />
-        <Icon color="secondary" margin="r-32" size="spot" />
-        <Icon color="tertiary" size="spot" />
-      </div>
-
-      <div>
-        <Icon margin="r-32" size="spot" />
-        <Icon margin="r-32" size="major" />
-        <Icon margin="r-32" size="minor" />
-      </div>
-
-      <div>
-        <Icon name="spinner" spin />
-      </div>
-
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
           gap: "16px",
           padding: "20px",
         }}
@@ -75,20 +82,29 @@ export const Colors = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: "12px",
+              padding: "16px",
               border: "1px solid #e0e0e0",
               borderRadius: "8px",
               textAlign: "center",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#f5f5f5";
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
-            <Icon name={name} />
-
+            <Icon name={name} size="major" />
             <span
               style={{
-                fontSize: "12px",
+                fontSize: "11px",
                 marginTop: "8px",
                 color: "#666",
                 wordBreak: "break-word",
+                fontWeight: "500",
               }}
             >
               {name}
@@ -99,5 +115,5 @@ export const Colors = () => {
     </ThemeDS>
   );
 };
-
+ */
 export default meta;
