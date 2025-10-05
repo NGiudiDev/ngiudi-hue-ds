@@ -2,10 +2,11 @@ import React from "react";
 
 import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
-import { ThemeDS } from "../ThemeDS/ThemeDS";
-import { Panel } from "../Panel/Panel";
+import { Grid } from "../Grid/Grid";
 import { Icon } from "../Icon/Icon";
+import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
+import { ThemeDS } from "../ThemeDS/ThemeDS";
 
 import { icons } from "../../theme/icons";
 
@@ -81,32 +82,23 @@ export const IconDocs = () => {
             A continuación se muestra el listado completo de íconos disponibles en el sistema. Si necesitas un ícono que no está en la lista, por favor contacta al equipo de diseño.
           </Text>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-              gap: "16px",
-              padding: "20px",
-            }}
-          >
+          <Grid.Container padding="t-24">
             {Object.keys(icons).map((name) => (
-              <div
+              <Grid.Item
+                align="center"
                 key={`container-icon-${name}`}
-                style={{
-                  alignItems: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  padding: "16px",
-                }}
+                padding="a-16"
+                xs={6}
+                sm={4}
               >
                 <Icon name={name} size="major" />
 
                 <Text align="center" margin="t-16" type="captionRegular">
                   {name}
                 </Text>
-              </div>
+              </Grid.Item>
             ))}
-          </div>
+          </Grid.Container>
       </Unstyled>
     </ThemeDS>
   );

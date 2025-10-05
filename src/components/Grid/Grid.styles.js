@@ -4,13 +4,16 @@ import { marginProperties, paddingProperties } from "../../utils/spacing";
 
 const Item = styled("div")`    
   box-sizing: border-box;
+  text-align: ${(props) => props.$align};
   
+  ${(props) => paddingProperties(props)}
+
   ${(props) => {
     let styles = "";
     
     //TODO: revisar esta función para agregarla en un util.
     Object.keys(props.theme.breakpoints).forEach(breakpoint => {
-      const value = props[breakpoint];
+      const value = props[`$${breakpoint}`];
 
       if (value !== undefined) {
         const breakpointValue = props.theme?.breakpoints[breakpoint];

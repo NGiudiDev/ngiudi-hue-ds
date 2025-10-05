@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 import { Styles } from "../Grid.styles";
 
 const DEFAULT_PROPS = {
+  align: "left",
   children: null,
+  padding: "a-0",
   xs: 12,
   sm: undefined,
   md: undefined,
@@ -17,11 +19,13 @@ export const GridItem = (props) => {
 
   return (
     <Styles.Item
-      xs={attrs.xs}
-      sm={attrs.sm}
-      md={attrs.md}
-      lg={attrs.lg}
-      xl={attrs.xl}
+      $align={attrs.align}
+      $padding={attrs.padding}
+      $xs={attrs.xs}
+      $sm={attrs.sm}
+      $md={attrs.md}
+      $lg={attrs.lg}
+      $xl={attrs.xl}
     >
       {attrs.children}
     </Styles.Item>
@@ -29,7 +33,9 @@ export const GridItem = (props) => {
 };
 
 GridItem.propTypes = {
+  align: PropTypes.oneOf(["left", "center", "right", "justify"]),
   children: PropTypes.node,
+  paddding: PropTypes.string,
   xs: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(["auto"])]),
   sm: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(["auto"])]),
   md: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(["auto"])]),
