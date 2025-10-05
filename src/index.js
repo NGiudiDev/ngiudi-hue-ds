@@ -25,7 +25,11 @@
 /*                                                                */
 /******************************************************************/
 
+export { Grid } from "./components/Grid/Grid";
+
 export { Icon } from "./components/Icon/Icon";
+
+export { Panel } from "./components/Panel/Panel";
 
 export { Text } from "./components/Text/Text";
 

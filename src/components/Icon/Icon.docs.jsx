@@ -17,7 +17,7 @@ export const IconDocs = () => {
             Icon
           </Text>
 
-          <Text margin="b-16">
+          <Text margin="b-16 x-8">
             Los íconos son representaciones visuales que se utilizan para comunicar las características esenciales de una acción, un objeto o un concepto específico. Deben ser simples y fácilmente identificables.
           </Text>
 
@@ -25,7 +25,7 @@ export const IconDocs = () => {
             Principios
           </Text>
 
-          <Panel.Wrapper margin="b-16">
+          <Panel.Wrapper margin="b-16 x-8">
             <Text margin="b-8" type="bodySemibold">
               Legible
             </Text>
@@ -35,7 +35,7 @@ export const IconDocs = () => {
             </Text>
           </Panel.Wrapper>
 
-          <Panel.Wrapper margin="b-16">
+          <Panel.Wrapper margin="b-16 x-8">
             <Text margin="b-8" type="bodySemibold">
               Consistente
             </Text>
@@ -45,7 +45,7 @@ export const IconDocs = () => {
             </Text>
           </Panel.Wrapper>
 
-          <Panel.Wrapper margin="b-16">
+          <Panel.Wrapper margin="b-16 x-8">
             <Text margin="b-8" type="bodySemibold">
               Escaneable
             </Text>
@@ -55,7 +55,7 @@ export const IconDocs = () => {
             </Text>
           </Panel.Wrapper>
 
-          <Panel.Wrapper margin="b-32">
+          <Panel.Wrapper margin="b-32 x-8">
             <Text margin="b-8" type="bodySemibold">
               Representativo
             </Text>
@@ -77,7 +77,7 @@ export const IconDocs = () => {
             Listado de íconos
           </Text>
 
-          <Text>
+          <Text margin="x-8">
             A continuación se muestra el listado completo de íconos disponibles en el sistema. Si necesitas un ícono que no está en la lista, por favor contacta al equipo de diseño.
           </Text>
 
