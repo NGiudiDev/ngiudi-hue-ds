@@ -6,13 +6,13 @@ import { Grid } from "../Grid/Grid";
 import { Icon } from "../Icon/Icon";
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
-import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
 
 import { icons } from "../../theme/icons";
 
 export const IconDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
           <Text margin="b-16" type="pageTitle">
             Icon
@@ -100,6 +100,6 @@ export const IconDocs = () => {
             ))}
           </Grid.Container>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };

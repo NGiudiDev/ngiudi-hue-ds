@@ -1,10 +1,10 @@
 import React from "react";
 
-import { ThemeDSDocs } from "./ThemeDS.docs";
+import { ThemeProviderDocs } from "./ThemeProvider.docs";
 
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
-import { ThemeDS } from "./ThemeDS";
+import { ThemeProvider } from "./ThemeProvider";
 
 const meta = {
   argTypes: {
@@ -13,28 +13,28 @@ const meta = {
       description: "Los componentes de la aplicación que necesitan acceso al tema del Design System.",
     },
   },
-  component: ThemeDS,
+  component: ThemeProvider,
   parameters: {
     docs: {
-      page: ThemeDSDocs,
+      page: ThemeProviderDocs,
     },
   },
   tags: ["autodocs"],
-  title: "Foundation/ThemeDS",
+  title: "Foundation/ThemeProvider",
 };
 
 // Playground básico
 export const Playground = {
   args: {
-    children: "Contenido envuelto en ThemeDS",
+    children: "Contenido envuelto en ThemeProvider",
   },
   render: (args) => (
-    <ThemeDS>
+    <ThemeProvider>
       <Panel.Wrapper>
         <Text type="title" margin="b-16">{args.children}</Text>
         <Text>Este contenido tiene acceso a todos los tokens del tema.</Text>
       </Panel.Wrapper>
-    </ThemeDS>
+    </ThemeProvider>
   ),
 };
 

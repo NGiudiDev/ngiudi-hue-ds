@@ -2,13 +2,13 @@ import React from "react";
 
 import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
-import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
 
 export const BoxDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
         <Text margin="b-16" type="pageTitle">
           Box
@@ -118,6 +118,6 @@ export const BoxDocs = () => {
           </Text>
         </Panel.Wrapper>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };

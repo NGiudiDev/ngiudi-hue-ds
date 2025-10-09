@@ -6,13 +6,13 @@ import { Box } from "../Box/Box";
 import { Grid } from "../Grid/Grid";
 import { Panel } from "../Panel/Panel";
 import { Text } from "./Text";
-import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
 
 import { typography } from "../../theme/typography";
 
 export const TextDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
         <Text margin="b-16" type="pageTitle">
           Text
@@ -430,6 +430,6 @@ export const TextDocs = () => {
           </Text>
         </Panel.Wrapper>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };

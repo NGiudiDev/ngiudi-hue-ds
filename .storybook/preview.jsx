@@ -1,17 +1,17 @@
 import React from "react";
 
-import { ThemeDS } from "../src/components/ThemeDS/ThemeDS";
+import { ThemeProvider } from "../src/components/ThemeProvider/ThemeProvider";
 import { Box } from "../src/components/Box/Box";
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
   decorators: [
     (Story) => (
-      <ThemeDS>
+      <ThemeProvider>
         <Box padding="b-32 t-24 x-24">
           <Story />
         </Box>
-      </ThemeDS>
+      </ThemeProvider>
     ),
   ],
   parameters: {

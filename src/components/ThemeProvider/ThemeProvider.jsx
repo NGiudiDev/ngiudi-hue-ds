@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import { breakpoints } from "../../theme/breakpoints";
 import { typography } from "../../theme/typography";
@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   children: null,
 };
 
-export const ThemeDS = (props) => {
+export const ThemeProvider = (props) => {
   const attrs = {
     ...DEFAULT_PROPS,
     ...props,
@@ -28,17 +28,17 @@ export const ThemeDS = (props) => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <StyledThemeProvider theme={theme}>
       {/* Preconexión a Google Fonts */}
       <link href="https://fonts.googleapis.com" rel="preconnect" />
       <link href="https://fonts.gstatic.com" rel="preconnect" />
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet" />
 
       {attrs.children}
-    </ThemeProvider>
+    </StyledThemeProvider>
   );
 };
 
-ThemeDS.propTypes = {
+ThemeProvider.propTypes = {
   children: PropTypes.node,
 };

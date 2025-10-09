@@ -33,4 +33,4 @@ export { Panel } from "./components/Panel/Panel";
 
 export { Text } from "./components/Text/Text";
 
-export { ThemeDS } from "./components/ThemeDS/ThemeDS";
+export { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";

@@ -4,11 +4,11 @@ import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
-import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
 
 export const GridDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
         <Text margin="b-16" type="pageTitle">
           Grid
@@ -174,6 +174,6 @@ export const GridDocs = () => {
           </Text>
         </Panel.Wrapper>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };

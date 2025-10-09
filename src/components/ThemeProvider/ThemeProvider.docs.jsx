@@ -4,18 +4,18 @@ import { Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
-import { ThemeDS } from "./ThemeDS";
+import { ThemeProvider } from "./ThemeProvider";
 
-export const ThemeDSDocs = () => {
+export const ThemeProviderDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
         <Text margin="b-16" type="pageTitle">
-          ThemeDS
+          ThemeProvider
         </Text>
 
         <Text margin="b-16 x-8">
-          ThemeDS es el componente proveedor de tema que debe envolver toda la aplicación para proporcionar acceso a los tokens de diseño del Design System. Utiliza el ThemeProvider de styled-components para hacer disponibles colores, tipografía, espaciado, sombras y otros elementos del tema a todos los componentes.
+          ThemeProvider es el componente proveedor de tema que debe envolver toda la aplicación para proporcionar acceso a los tokens de diseño del Design System. Utiliza el ThemeProvider de styled-components para hacer disponibles colores, tipografía, espaciado, sombras y otros elementos del tema a todos los componentes.
         </Text>
 
         <Text margin="b-24" type="title">
@@ -78,20 +78,20 @@ export const ThemeDSDocs = () => {
 
         <Panel.Wrapper margin="b-16 x-8">
           <Text margin="b-8">
-            ThemeDS debe envolver el componente raíz de tu aplicación para proporcionar acceso global al tema.
+            ThemeProvider debe envolver el componente raíz de tu aplicación para proporcionar acceso global al tema.
           </Text>
 
           <Text type="code" as="pre" margin="b-8">
   {`  import React from "react";
 
-  import { ThemeDS } from "./components/ThemeDS/ThemeDS";
+  import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";
   import { MainContent } from "./components/MainContent";
 
   function App() {
     return (
-      <ThemeDS>
+      <ThemeProvider>
         <MainContent />
-      </ThemeDS>
+      </ThemeProvider>
     );
   }
 
@@ -106,7 +106,7 @@ export const ThemeDSDocs = () => {
 
         <Panel.Wrapper margin="b-16 x-8">
           <Text margin="b-8">
-            Una vez configurado ThemeDS, todos los styled-components tienen acceso automático al tema a través de props.
+            Una vez configurado ThemeProvider, todos los styled-components tienen acceso automático al tema a través de props.
           </Text>
 
           <Text type="code" as="pre" margin="b-8">
@@ -174,7 +174,7 @@ export const ThemeDSDocs = () => {
           </Text>
           
           <Text margin="b-4">
-            &bull; Envolver toda la aplicación con ThemeDS en el componente raíz
+            &bull; Envolver toda la aplicación con ThemeProvider en el componente raíz
           </Text>
           
           <Text margin="b-4">
@@ -208,7 +208,7 @@ export const ThemeDSDocs = () => {
           </Text>
           
           <Text margin="b-4">
-            &bull; No acceder directamente a archivos de tema fuera de ThemeDS
+            &bull; No acceder directamente a archivos de tema fuera de ThemeProvider
           </Text>
           
           <Text margin="b-4">
@@ -220,10 +220,10 @@ export const ThemeDSDocs = () => {
           </Text>
           
           <Text>
-            &bull; No omitir ThemeDS en aplicaciones que usan el Design System
+            &bull; No omitir ThemeProvider en aplicaciones que usan el Design System
           </Text>
         </Panel.Wrapper>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };

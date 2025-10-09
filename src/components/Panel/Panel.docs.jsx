@@ -4,11 +4,11 @@ import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
 import { Panel } from "./Panel";
 import { Text } from "../Text/Text";
-import { ThemeDS } from "../ThemeDS/ThemeDS";
+import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
 
 export const PanelDocs = () => {
   return (
-    <ThemeDS>
+    <ThemeProvider>
       <Unstyled>
         <Text margin="b-16" type="pageTitle">
           Panel
@@ -198,6 +198,6 @@ export const PanelDocs = () => {
           </Text>
         </Panel.Wrapper>
       </Unstyled>
-    </ThemeDS>
+    </ThemeProvider>
   );
 };
