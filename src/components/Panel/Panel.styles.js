@@ -2,6 +2,13 @@ import { styled } from "styled-components";
 
 import { marginProperties, paddingProperties } from "../../utils/spacing";
 
+const Content = styled("div")`
+  flex-grow: 1;
+
+  ${(props) => paddingProperties(props)}
+  ${(props) => marginProperties(props)}
+`;
+
 const Footer = styled("div")`
   margin-top: auto;
   width: 100%;
@@ -20,6 +27,7 @@ const Wrapper = styled("div")`
   
   border-radius: 4px;
   box-shadow: ${(props) => props.onClick && props.theme.shadows.level1};
+  box-sizing: border-box;
   cursor: ${(props) => props.onClick ? "pointer" : "default"};
   display: flex;
   flex-direction: column;
@@ -34,6 +42,7 @@ const Wrapper = styled("div")`
 `;
 
 export const Styles = {
+  Content,
   Footer,
   Wrapper
 };

@@ -29,14 +29,10 @@ export const ThemeDS = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
+      {/* Preconexión a Google Fonts */}
       <link href="https://fonts.googleapis.com" rel="preconnect" />
-
       <link href="https://fonts.gstatic.com" rel="preconnect" />
-
-      <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap"
-        rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet" />
 
       {attrs.children}
     </ThemeProvider>
