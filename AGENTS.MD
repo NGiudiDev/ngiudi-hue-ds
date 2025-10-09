@@ -134,24 +134,6 @@ export const Component = (props) => {
 - **Archivos**: PascalCase para componentes, camelCase para utilities
 - **Styled Components**: PascalCase (`Wrapper`, `IconItem`, `TextWrapper`)
 
-### 5. Optimización con React Hooks
-Usar `useMemo` para objetos complejos que se pasan como props:
-
-```jsx
-import React, { useMemo } from "react";
-
-export const Text = (props) => {
-  const textOptions = useMemo(() => ({
-    $align: attrs.align,
-    $color: attrs.color,
-    $margin: attrs.margin,
-    // ... otras props
-  }), [attrs.align, attrs.color, attrs.margin]);
-
-  return <Styles.TextWrapper {...textOptions} />;
-};
-```
-
 ---
 
 ## 🎨 ESTILOS Y STYLING

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import { Styles } from "./Text.styles";
@@ -25,8 +25,9 @@ export const Text = (props) => {
     attrs.type = "bodyRegular";
   }
 
-  // Memoize text options to prevent unnecessary re-renders
-  const textOptions = useMemo(() => ({
+  const labelProps = attrs.as === "label" ? { htmlFor: attrs.htmlFor } : {};
+
+  const textOptions = {
     $align: attrs.align,
     children: attrs.children,
     $color: attrs.color,
@@ -34,10 +35,7 @@ export const Text = (props) => {
     $margin: attrs.margin,
     $padding: attrs.padding,
     $type: attrs.type,
-  }), [attrs.align, attrs.children, attrs.color, attrs.decoration, attrs.margin, attrs.padding, attrs.type]);
-
-  // Additional props for label elements
-  const labelProps = attrs.as === "label" ? { htmlFor: attrs.htmlFor } : {};
+  };
 
   // Render appropriate wrapper based on element type
   if (attrs.as === "label") {
