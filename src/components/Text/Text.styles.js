@@ -1,31 +1,10 @@
 import styled, { css } from "styled-components";
 
 import { marginProperties, paddingProperties } from "../../utils/spacing";
+import { getColorValue } from "../../utils/colors";
+
 import { typography } from "../../theme/typography";
 import { colors } from "../../theme/colors";
-
-/**
- * Resolves color value from theme colors or returns the color as-is
- * @param {string} color - Color key from theme or direct color value
- * @returns {string} - Resolved color value
- */
-const getColorValue = (color) => {
-  if (!color) return colors.black.main;
-  
-  // Handle nested color objects (e.g., "black.main" or "primary.light")
-  if (color.includes(".")) {
-    const [colorFamily, variant] = color.split(".");
-    return colors[colorFamily]?.[variant] || colors.black.main;
-  }
-  
-  // Handle direct color family (e.g., "black", "primary")
-  if (colors[color]) {
-    return colors[color].main || colors[color];
-  }
-  
-  // Return as-is for custom colors (e.g., "#ffffff", "red")
-  return color;
-};
 
 /**
  * Common text styles applied to both TextWrapper and LabelWrapper
@@ -34,7 +13,7 @@ const textStyles = (props) => {
   const typographyVariant = typography[props.$type] || typography.bodyRegular;
   
   return css`
-    color: ${getColorValue(props.$color)};
+    color: ${getColorValue(props.theme.colors, props.$color) || props.theme.colors.black.main};
     font-family: "Source Sans 3", sans-serif;
     font-size: ${typographyVariant.size};
     font-weight: ${typographyVariant.weight};

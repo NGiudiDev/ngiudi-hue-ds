@@ -10,7 +10,7 @@ const meta = {
   argTypes: {
     color: {
       control: { type: "text" },
-      description: "Define el color del ícono. Acepta tokens de color del tema.",
+      description: "Define el color del texto. Acepta tokens de color del tema (ej: 'primary.main', 'error.light').",
     },
     margin: {
       control: { type: "text" },
@@ -51,7 +51,7 @@ export const Playground = {
   args: {
     name: "home",
     size: "major",
-    color: "black", 
+    color: "black.main", 
     spin: false,
     margin: "a-0",
   },

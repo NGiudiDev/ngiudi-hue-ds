@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
 import { marginProperties } from "../../utils/spacing";
+import { getColorValue } from "../../utils/colors";
+
 import { animations } from "../../theme/animations";
 
 //? sizes declaration
@@ -20,7 +22,7 @@ const ICON_SIZES = {
 const IconItem = styled("svg")`
   height: ${props => ICON_SIZES[props.$size]};
   width: ${props => ICON_SIZES[props.$size]};
-  fill: ${props => props.theme.colors[props.$color]?.main || props.theme.colors.black.main};
+  fill: ${props => getColorValue(props.theme.colors, props.$color) || props.theme.colors.black.main};
   display: block;
 `;
 
