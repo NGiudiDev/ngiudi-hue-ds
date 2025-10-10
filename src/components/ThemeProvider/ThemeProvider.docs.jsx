@@ -81,7 +81,7 @@ export const ThemeProviderDocs = () => {
             ThemeProvider debe envolver el componente raíz de tu aplicación para proporcionar acceso global al tema.
           </Text>
 
-          <Text type="code" as="pre" margin="b-8">
+          <Text as="pre" margin="b-8">
   {`  import React from "react";
 
   import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";
@@ -109,7 +109,7 @@ export const ThemeProviderDocs = () => {
             Una vez configurado ThemeProvider, todos los styled-components tienen acceso automático al tema a través de props.
           </Text>
 
-          <Text type="code" as="pre" margin="b-8">
+          <Text as="pre" margin="b-8">
   {`import styled from "styled-components";
 
   const StyledComponent = styled.div\`
@@ -142,7 +142,7 @@ export const ThemeProviderDocs = () => {
             Para acceder al tema en componentes funcionales sin styled-components.
           </Text>
 
-          <Text type="code" as="pre" margin="b-8">
+          <Text as="pre" margin="b-8">
   {`import React from "react";
   import { useTheme } from "styled-components";
 

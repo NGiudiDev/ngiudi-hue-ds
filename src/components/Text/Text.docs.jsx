@@ -126,7 +126,7 @@ export const TextDocs = () => {
           </Text>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"h1\" type=\"pageTitle\">Título Principal</Text>"}
             </Text>
             
@@ -136,7 +136,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"h2\" type=\"title\">Título de Sección</Text>"}
             </Text>
 
@@ -146,7 +146,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"h3\" type=\"subtitle\">Subtítulo</Text>"}
             </Text>
             
@@ -162,7 +162,7 @@ export const TextDocs = () => {
           </Text>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"p\" type=\"bodyRegular\">Párrafo</Text>"}
             </Text>
             
@@ -172,7 +172,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"span\" type=\"bodySemibold\">Texto inline</Text>"}
             </Text>
             
@@ -182,7 +182,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box>
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text as=\"label\" htmlFor=\"input-id\">Etiqueta</Text>"}
             </Text>
             
@@ -206,7 +206,7 @@ export const TextDocs = () => {
           </Text>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text color=\"primary.main\">Texto primario</Text>"}
             </Text>
             
@@ -216,7 +216,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box margin="b-12">
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text color=\"error.light\">Texto de error</Text>"}
             </Text>
             
@@ -226,7 +226,7 @@ export const TextDocs = () => {
           </Box>
           
           <Box>
-            <Text type="code" as="pre" margin="b-4">
+            <Text as="pre" margin="b-4">
               {"<Text color=\"black.mediumEmphasis\">Texto secundario</Text>"}
             </Text>
             
@@ -245,7 +245,7 @@ export const TextDocs = () => {
             Para crear formularios con etiquetas correctamente asociadas.
           </Text>
 
-          <Text type="code" as="pre" margin="b-8">
+          <Text as="pre" margin="b-8">
   {`<Text as="label" 
         type="bodySemibold" 
         htmlFor="email-input"
@@ -282,7 +282,7 @@ export const TextDocs = () => {
             Para artículos, blogs y contenido largo con tipografía optimizada para lectura.
           </Text>
 
-          <Text type="code" as="pre" margin="b-8">
+          <Text as="pre" margin="b-8">
   {`<article>
     <Text as="h1" type="pageTitle" margin="b-16">
       Título del Artículo
