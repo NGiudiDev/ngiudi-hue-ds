@@ -33,7 +33,7 @@ const DEFAULT_PROPS = {
 };
 
 export const Box = (props) => {
-  const attrs = { ...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   return (
     <Wrapper $margin={attrs.margin} $padding={attrs.padding}>
@@ -112,7 +112,7 @@ const DEFAULT_PROPS = {
 };
 
 export const Component = (props) => {
-  const attrs = { ...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
   // usar attrs en lugar de props
 };
 ```

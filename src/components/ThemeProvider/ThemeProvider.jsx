@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { merge } from "lodash";
+
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import { breakpoints } from "../../theme/breakpoints";
@@ -14,10 +16,7 @@ const DEFAULT_PROPS = {
 };
 
 export const ThemeProvider = (props) => {
-  const attrs = {
-    ...DEFAULT_PROPS,
-    ...props,
-  };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   const theme = {
     breakpoints: breakpoints,

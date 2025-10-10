@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { merge } from "lodash";
+
 import { Styles } from "../Panel.styles";
 
 const DEFAULT_PROPS = {
@@ -13,7 +15,7 @@ const DEFAULT_PROPS = {
 };
 
 export const PanelWrapper = (props) => {
-  const attrs = { ...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   return (
     <Styles.Wrapper

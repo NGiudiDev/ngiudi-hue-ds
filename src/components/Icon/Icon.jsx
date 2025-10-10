@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { merge } from "lodash";
+
 import { Styles } from "./Icon.styles";
 
 import { icons } from "../../theme/icons";
@@ -15,10 +17,7 @@ const DEFAULT_PROPS = {
 };
 
 export const Icon = (props) => {
-  const attrs = {
-    ...DEFAULT_PROPS,
-    ...props,
-  };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   // Retrieve the icon data
   const iconData = icons[attrs.name];

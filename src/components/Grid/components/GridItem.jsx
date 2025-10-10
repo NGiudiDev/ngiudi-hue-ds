@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { merge } from "lodash";
+
 import { Styles } from "../Grid.styles";
 
 const DEFAULT_PROPS = {
@@ -15,7 +17,7 @@ const DEFAULT_PROPS = {
 };
 
 export const GridItem = (props) => {
-  const attrs = { ...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   return (
     <Styles.Item

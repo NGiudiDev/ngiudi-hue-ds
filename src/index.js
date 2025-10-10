@@ -25,6 +25,10 @@
 /*                                                                */
 /******************************************************************/
 
+export { Badge } from "./components/Badge/Badge";
+
+export { Box } from "./components/Box/Box";
+
 export { Grid } from "./components/Grid/Grid";
 
 export { Icon } from "./components/Icon/Icon";

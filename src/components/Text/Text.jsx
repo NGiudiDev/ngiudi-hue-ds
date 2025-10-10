@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { merge } from "lodash";
+
 import { Styles } from "./Text.styles";
 
 import { typography } from "../../theme/typography";
@@ -17,7 +19,7 @@ const DEFAULT_PROPS = {
 };
 
 export const Text = (props) => {
-  const attrs = {...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   // Validate typography type exists
   if (!typography[attrs.type]) {

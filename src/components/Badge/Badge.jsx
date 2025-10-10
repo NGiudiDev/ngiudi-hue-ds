@@ -5,6 +5,8 @@ import { Text } from "../Text/Text";
 
 import { Styles } from "./Badge.styles";
 
+import { merge } from "lodash";
+
 const DEFAULT_PROPS = {
   children: null,
   color: "primary.main",
@@ -17,7 +19,7 @@ const DEFAULT_PROPS = {
 };
 
 export const Badge = (props) => {
-  const attrs = { ...DEFAULT_PROPS, ...props };
+  const attrs = merge({}, DEFAULT_PROPS, props);
 
   return (
     <Styles.Wrapper
