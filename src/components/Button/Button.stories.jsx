@@ -1,6 +1,6 @@
 import React from "react";
 
-// import { ButtonDocs } from "./Button.docs";
+import { ButtonDocs } from "./Button.docs";
 
 import { Button } from "./Button";
 
@@ -55,11 +55,11 @@ const meta = {
     },
   },
   component: Button,
-  /* parameters: {
+  parameters: {
     docs: {
       page: ButtonDocs,
     },
-  }, */
+  },
   tags: ["autodocs"],
   title: "Components/Button",
 };
