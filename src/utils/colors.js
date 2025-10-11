@@ -17,5 +17,5 @@ export const getColorValue = (colors, color) => {
     return colors[color].main || colors[color];
   }
 
-  return null;
+  return color;
 };

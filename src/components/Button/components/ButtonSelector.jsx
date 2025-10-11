@@ -12,8 +12,8 @@ const DEFAULT_PROPS = {
   disclosure: false,
   fullWidth: false,
   iconProps: {
-    color: "white.main",
-    margin: "r-4",
+    color: "currentColor",
+    margin: "r-8",
     name: "",
     size: "minor",
   },

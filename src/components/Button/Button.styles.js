@@ -25,33 +25,26 @@ const FilledButton = styled("button")`
     height: 38px;
     justify-content: center;
     min-width: 64px;
-
-    padding: ${
-      props.$iconProps.name
-        ? "9px 20px 9px 12px"
-        : props.$disclosure
-        ? "9px 12px 9px 20px"
-        : "9px 20px"
-    };
-    
+    padding: 9px 20px;    
     position: relative;
     width: ${props.$fullWidth ? "100%" : "auto"};
 
     ${marginProperties(props)}
 
+    &:hover:enabled {
+      background-color: ${props.theme.colors.primary.middleHovered};
+      box-shadow: ${props.theme.shadows.level2};
+    }
+
     &:active:enabled {
       background-color: ${props.theme.colors.primary.darkPressed};
       box-shadow: ${props.theme.shadows.level3};
+      color: ${props.theme.colors.white.main};
     }
 
     &:disabled {
       background-color: ${props.theme.colors.black.border};
       box-shadow: none;
-    }
-
-    &:hover:enabled {
-      background-color: ${props.theme.colors.primary.middleHovered};
-      box-shadow: ${props.theme.shadows.level2};
     }
   `}
 `;
@@ -85,15 +78,7 @@ const OutlinedButton = styled("button")`
     height: 38px;
     justify-content: center;
     min-width: 64px;
-
-    padding: ${
-      props.$iconProps.name
-        ? "8px 19px 8px 11px"
-        : props.$disclosure
-        ? "8px 11px 8px 19px"
-        : "8px 19px"
-    };
-
+    padding: 8px 19px;
     position: relative;
     width: ${props.$fullWidth ? "100%" : "auto"};
 
@@ -112,6 +97,7 @@ const OutlinedButton = styled("button")`
     }
 
     &:disabled {
+      border-color: ${props.theme.colors.black.disabled};
       color: ${props.theme.colors.black.disabled};
     }
   `}
@@ -131,15 +117,7 @@ const TextButton = styled("button")`
     height: 38px;
     justify-content: center;
     min-width: 64px;
-
-    padding: ${
-      props.$iconProps.name
-        ? "9px 12px 9px 8px"
-        : props.$disclosure
-        ? "9px 8px 9px 12px"
-        : "9px 12px"
-    };
-
+    padding: 9px 12px;
     position: relative;
     width: ${props.$fullWidth ? "100%" : "auto"};
 

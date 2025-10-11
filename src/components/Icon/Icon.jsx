@@ -8,7 +8,7 @@ import { Styles } from "./Icon.styles";
 import { icons } from "../../theme/icons";
 
 const DEFAULT_PROPS = {
-  color: "black",
+  color: "black.main",
   margin: "a-0",
   name: "home",
   onClick: null,

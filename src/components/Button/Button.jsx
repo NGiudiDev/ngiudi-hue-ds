@@ -14,8 +14,8 @@ const DEFAULT_PROPS = {
   disclosure: false,
   fullWidth: false,
   iconProps: {
-    color: "white.main",
-    margin: "r-4",
+    color: "currentColor",
+    margin: "r-8",
     name: "",
     size: "minor",
   },
@@ -44,7 +44,7 @@ export const Button = (props) => {
     >
       {/* loading view */}
       <Styles.LoaderWrapper $isLoading={attrs.isLoading}>
-        <Icon color="white.main" name="spinner" size="minor" />
+        <Icon color="currentColor" name="spinner" size="minor" />
       </Styles.LoaderWrapper>
 
       {/* content view */}
@@ -54,7 +54,7 @@ export const Button = (props) => {
         {attrs.children}
 
         {attrs.disclosure && (
-          <Icon color="white.main" margin="l-8" name="downAngle" size="minor" />  
+          <Icon color="currentColor" margin="l-8" name="downAngle" size="minor" />  
         )}
       </Styles.ContentWrapper>
     </ButtonSelector>
