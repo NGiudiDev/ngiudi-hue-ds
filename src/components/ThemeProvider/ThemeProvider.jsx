@@ -5,6 +5,7 @@ import { merge } from "lodash";
 
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
+import { animations } from "../../theme/animations";
 import { breakpoints } from "../../theme/breakpoints";
 import { typography } from "../../theme/typography";
 import { shadows } from "../../theme/shadows";
@@ -19,6 +20,7 @@ export const ThemeProvider = (props) => {
   const attrs = merge({}, DEFAULT_PROPS, props);
 
   const theme = {
+    animations: animations,
     breakpoints: breakpoints,
     colors: colors,
     icons: icons,
