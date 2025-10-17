@@ -81,6 +81,7 @@ export const Playground = {
     isLoading: false,
     kind: "filled",
     margin: "a-0",
+    onClick: () => alert("Button clicked!"),
     type: "button",
   },
   render: (args) => (
