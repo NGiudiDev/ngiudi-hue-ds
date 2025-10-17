@@ -10,7 +10,7 @@
     "docs": "storybook dev --docs",
     "lint": "npx eslint .",
     "start": "storybook dev -p 6006",
-    "test": "react-scripts test --watchAll=true .test.js"
+    "test": "vitest"
   },
   "devDependencies": {
     "@babel/cli": "7.28.3",
@@ -46,7 +46,6 @@
     "react-hot-toast": "2.6.0",
     "react-refresh": "0.18.0",
     "react-router-dom": "7.9.4",
-    "react-scripts": "5.0.1",
     "storybook": "9.1.13",
     "styled-components": "6.1.19",
     "vite": "7.1.10",
