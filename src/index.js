@@ -29,9 +29,15 @@ export { Badge } from "./components/Badge/Badge";
 
 export { Box } from "./components/Box/Box";
 
+export { Button } from "./components/Button/Button";
+
+export { Divider } from "./components/Divider/Divider";
+
 export { Grid } from "./components/Grid/Grid";
 
 export { Icon } from "./components/Icon/Icon";
+
+export { Link } from "./components/Link/Link";
 
 export { Panel } from "./components/Panel/Panel";
 

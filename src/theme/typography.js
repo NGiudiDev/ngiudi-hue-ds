@@ -22,7 +22,7 @@ export const typography = {
   pageTitle: {
     lineHeight: "42px",
     size: "28px",
-    weight: 600,
+    weight: 700,
   },
   subtitle: {
     lineHeight: "28px",
@@ -32,6 +32,6 @@ export const typography = {
   title: {
     lineHeight: "32px",
     size: "22px",
-    weight: 800,
+    weight: 700,
   },
 };

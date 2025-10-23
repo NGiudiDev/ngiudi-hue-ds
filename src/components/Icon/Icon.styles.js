@@ -3,8 +3,6 @@ import styled, { css } from "styled-components";
 import { marginProperties } from "../../utils/spacing";
 import { getColorValue } from "../../utils/colors";
 
-import { animations } from "../../theme/animations";
-
 //? sizes declaration
 const ICON_WRAPPER_SIZES = {
   minor: "20px",
@@ -35,7 +33,7 @@ const IconWrapper = styled("div")`
   cursor: ${props => props.onClick ? "pointer" : "default"};
   
   ${props => props.$spin && css`
-    animation: ${animations.spin} 1s linear infinite;
+    animation: ${props.theme.animations.spin} 1s linear infinite;
   `}
   
   ${props => marginProperties(props)}

@@ -3,18 +3,15 @@ import styled, { css } from "styled-components";
 import { marginProperties, paddingProperties } from "../../utils/spacing";
 import { getColorValue } from "../../utils/colors";
 
-import { typography } from "../../theme/typography";
-import { colors } from "../../theme/colors";
-
 /**
  * Common text styles applied to both TextWrapper and LabelWrapper
  */
 const textStyles = (props) => {
-  const typographyVariant = typography[props.$type] || typography.bodyRegular;
+  const typographyVariant = props.theme.typography[props.$type] || props.theme.typography.bodyRegular;
   
   return css`
     color: ${getColorValue(props.theme.colors, props.$color) || props.theme.colors.black.main};
-    font-family: "Source Sans 3", sans-serif;
+    font-family: Public Sans, sans-serif;
     font-size: ${typographyVariant.size};
     font-weight: ${typographyVariant.weight};
     line-height: ${typographyVariant.lineHeight};
@@ -51,7 +48,7 @@ const LabelWrapper = styled("label")`
     
     /* Improve accessibility */
     &:focus-visible {
-      outline: 2px solid ${colors.highlight.main};
+      outline: 2px solid ${props.theme.colors.highlight.main};
       outline-offset: 2px;
       border-radius: 2px;
     }
