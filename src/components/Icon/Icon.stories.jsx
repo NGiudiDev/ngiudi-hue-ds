@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconDocs } from "./Icon.docs";
 
-import { Icon } from "../Icon/Icon";
+import { Icon } from "./Icon";
 
 import { icons } from "../../theme/icons";
 
@@ -49,11 +49,11 @@ const meta = {
 // Playground interactivo para probar todas las props
 export const Playground = {
   args: {
+    color: "black.main",
+    margin: "a-0",
     name: "home",
     size: "major",
-    color: "black.main", 
     spin: false,
-    margin: "a-0",
   },
   render: (args) => (
     <Icon {...args} />

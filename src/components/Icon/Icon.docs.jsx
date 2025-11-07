@@ -3,7 +3,7 @@ import React from "react";
 import { Canvas, Controls, Unstyled } from "@storybook/addon-docs/blocks";
 
 import { Grid } from "../Grid/Grid";
-import { Icon } from "../Icon/Icon";
+import { Icon } from "./Icon";
 import { Panel } from "../Panel/Panel";
 import { Text } from "../Text/Text";
 import { ThemeProvider } from "../ThemeProvider/ThemeProvider";
